@@ -74,7 +74,7 @@ class RegistrationForm extends Component {
           />
         </div>
         <footer class='registration-footer'>
-          <Button type="submit">Sign up</Button>{' '}
+          <Button type="submit" className='rounded hover px-1 py-2'>Sign up</Button>{' '}
           <Link to="/login">Already have an account?</Link>
         </footer>
       </form>
