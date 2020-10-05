@@ -51,7 +51,7 @@ class LoginForm extends Component {
           {error&&<p>{error}</p>}
         </div>
         <div className="flex flex-1">
-          <Label htmlFor='login-username-input ' className=" flex-1">
+          <Label htmlFor='login-username-input' className=" flex-1">
             Username
           </Label>
           <Input className="my-1 flex-1"
