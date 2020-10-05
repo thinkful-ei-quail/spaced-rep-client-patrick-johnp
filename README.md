@@ -1,4 +1,4 @@
-# Spaced Repetition Capstone
+cd # Spaced Repetition Capstone
 
 ## Setup
 
