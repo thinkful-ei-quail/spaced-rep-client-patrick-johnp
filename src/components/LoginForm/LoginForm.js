@@ -54,7 +54,7 @@ class LoginForm extends Component {
           <Label htmlFor='login-username-input' className="">
             Username
           </Label>
-          <Input className=""
+          <Input className="my-1"
             ref={this.firstInput}
             id='login-username-input'
             name='username'
@@ -65,14 +65,14 @@ class LoginForm extends Component {
           <Label htmlFor='login-password-input' className="">
             Password
           </Label>
-          <Input className=""
+          <Input className="my-1"
             id='login-password-input'
             name='password'
             type='password'
             required
           />
         </div>
-        <Button type='submit className=""'>
+        <Button type='submit' className="rounded hover px-1 py-2">
           Login
         </Button>
       </form>

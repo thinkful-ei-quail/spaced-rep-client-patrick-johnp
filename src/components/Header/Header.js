@@ -32,9 +32,9 @@ class Header extends Component {
   renderLoginLink() {
     return (
       <nav>
-        <Link to='/login' className="text-white p-4 flex-1 text-dec-none">Login</Link>
+        <Link to='/login' className="text-white py-2 m-1 hover rounded-top flex-1 text-dec-none">Login</Link>
         {' '}
-        <Link to='/register' className="text-white p-4 flex-1 text-dec-none ">Sign up</Link>
+        <Link to='/register' className="text-white py-2 m-1 rounded-top hover flex-1 text-dec-none ">Sign up</Link>
       </nav>
     )
   }
