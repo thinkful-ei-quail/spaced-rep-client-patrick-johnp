@@ -1,19 +1,19 @@
-import React, {Component} from 'react'
-import {Link} from 'react-router-dom'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
 import './Header.css'
 
 class Header extends Component {
-  static contextType=UserContext
+  static contextType = UserContext
 
-  handleLogoutClick=() => {
+  handleLogoutClick = () => {
     this.context.processLogout()
   }
 
   renderLogoutLink() {
     return (
-      <div className="header-cont background-green center width-full ">
+      <div>
         <span>
           {this.context.user.name}
         </span>
@@ -48,7 +48,7 @@ class Header extends Component {
         </h1>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
-          :this.renderLoginLink()}
+          : this.renderLoginLink()}
       </header>
     );
   }
