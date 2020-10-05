@@ -13,9 +13,9 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-      <div className="header-cont height-full p-4 flex">
+      <div className="header-cont height-full flex">
 
-        <span>
+        <span className="text-white">
           {this.context.user.name}
         </span>
         <nav>

@@ -62,7 +62,7 @@
 }
 
 .box-shadow {
-  box-shadow: .2em .2em .4rem grey;
+  box-shadow: .2em .2em .2rem lightgrey;
 }
 
 .text-shadow {
@@ -85,6 +85,10 @@
 
 .rounded {
   border-radius: 3rem;
+}
+
+.rounded-light {
+  border-radius: 1rem;
 }
 
 .py-2 {
