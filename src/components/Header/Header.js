@@ -13,7 +13,7 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-      <div className="flex-1 flex flex-row center rounded-top background-green mx-2">
+      <div className="flex-1 flex flex-row center rounded-top mx-2">
 
         <span className="text-white font-irish font-xl flex-1 mx-2">
           {this.context.user.name}'s Dashboard
@@ -41,8 +41,8 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header-cont bg-grad-to-r center width-full font-mono font-xl text-white flex ">
-        <h1 className="backgorund-green  flex-1">
+      <header className="header-cont bg-grad-to-r center rounded width-full font-mono font-xl text-white flex ">
+        <h1 className="flex-1">
           <Link to='/' className="text-white text-dec-none font-irish tracking-wide">
             Spaced repetition
           </Link>

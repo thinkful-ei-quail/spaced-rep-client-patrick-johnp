@@ -23,7 +23,7 @@ export default class App extends Component {
     return (
       <div className='App flex width-full'>
         <Header />
-        <main className="center flex width-full height-full">
+        <main className="center flex width-full height-full pb-10">
           {hasError&&(
             <p>There was an error! Oh no!</p>
           )}
@@ -51,7 +51,7 @@ export default class App extends Component {
           </Switch>
         </main>
 
-        <footer className="background-orange width-full flex flex-2 flex-base mt-1 max-height">
+        <footer className="background-orange width-full flex-base mt-1 max-height-4 mt-10">
           <div className="flex-1 text-bold background-orange px-2 text-white center tracking-wide font-mono font-xl">
             Practice learning a language with the spaced reptition revision technique.
           </div>

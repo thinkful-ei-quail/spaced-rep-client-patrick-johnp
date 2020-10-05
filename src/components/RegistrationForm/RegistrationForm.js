@@ -76,10 +76,10 @@ class RegistrationForm extends Component {
             className='flex-1 my-1'
           />
         </div>
-        <footer className='flex-1 flex'>
+        <div className='flex-1 flex'>
           <Button type="submit" className='rounded flex-1 hover px-1 py-2 font-xl font-mono '>Sign up</Button>{' '}
           <Link to="/login" className="flex-1">Already have an account?</Link>
-        </footer>
+        </div>
       </form>
     );
   }

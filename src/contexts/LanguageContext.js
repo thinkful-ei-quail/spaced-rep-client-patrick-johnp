@@ -1,5 +1,5 @@
-import react from 'react';
-import React, {Component} from 'react'
+
+import React from 'react'
 
 const LanguageContext=React.createContext({
   language: {},
@@ -22,6 +22,7 @@ export class LanguageProvider extends React.Component {
       words: [],
       langError: null,
     }
+    this.state=state;
   }
   setLangError=error => {
     console.error(error)
@@ -58,10 +59,13 @@ export class LanguageProvider extends React.Component {
       clearError: this.clearLangError,
       setLanguage: this.setLanguage,
       setWords: this.setWords,
-      setWordCorrect: this.setWordCorrect
+      setWordCorrect: this.setWordCorrect,
+      setWordIncorrect: this.setWordIncorrect
     }
-    return (<LanguageContext.Provider value={value}>
-      {this.props.children}
-    </LanguageContext.Provider>)
+    return (
+      <LanguageContext.Provider value={value}>
+        {this.props.children}
+      </LanguageContext.Provider>
+    )
   }
 }

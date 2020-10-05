@@ -15,10 +15,6 @@ body,
   width: 100%;
 }
 
-.header-cont {
-  background-color: #0E6D3B;
-}
-
 .background-green {
   background-color: #0E6D3B;
 }
@@ -27,8 +23,27 @@ body,
   background-color: #EB7335;
 }
 
+
+.background-lightgrey,
+.background-lightgray {
+  background-color: lightgray;
+
+}
+
+.transition:hover {
+  transition: ease-in-out, .1s;
+  transform: rotate(1deg);
+  transform: scale(1.25);
+  transition-delay: .01s;
+}
+
 .bg-grad-to-r {
-  background-image: linear-gradient(to right, #0E6D3B, #42b53c, #0E6D3B);
+  /* background-image: linear-gradient(to right, #6dbf71, #0E6D3B, #6dbf71); */
+  background-image: linear-gradient(to bottom, #6dbf71, #0E6D3B, #6dbf71);
+}
+
+.tricolor-grad {
+  background-image: linear-gradient(to right, #0E6D3B, white, #EB7335);
 }
 
 .center {
@@ -40,20 +55,36 @@ body,
   color: white;
 }
 
-.p-4 {
-  padding: 2rem;
+.text-red {
+  color: firebrick;
+}
+
+.text-green {
+  color: #0E6D3B;
 }
 
 .text-light-gray {
   color: lightgray;
 }
 
+.text-dec-none {
+  text-decoration: none;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.flex-col-wrap {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 
 .flex-row {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
@@ -66,8 +97,8 @@ body,
   flex: 2;
 }
 
-.text-dec-none {
-  text-decoration: none;
+.flex-base {
+  align-self: baseline;
 }
 
 @font-face {
@@ -99,6 +130,10 @@ body,
   text-shadow: .1rem .1rem .2rem lightgray;
 }
 
+.box-shadow-dark {
+  box-shadow: .2em .2em .2rem grey;
+}
+
 .text-bold {
   font-weight: bold;
 }
@@ -108,16 +143,29 @@ body,
 }
 
 .m-1 {
-  margin: 1em;
+  margin: .5em;
 }
 
 .mt-1 {
   margin-top: 1em;
 }
 
+.mt-10 {
+  margin-top: 10rem;
+}
+
+.mb-10 {
+  margin-bottom: 10rem;
+}
+
 .mx-2 {
   margin-left: 4rem;
   margin-right: 4rem;
+}
+
+.my-1 {
+  margin-top: .2rem;
+  margin-bottom: .2rem;
 }
 
 .rounded {
@@ -126,6 +174,20 @@ body,
 
 .rounded-light {
   border-radius: 1rem;
+}
+
+.rounded-top {
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.rounded-b {
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+.p-4 {
+  padding: 2rem;
 }
 
 .px-2 {
@@ -143,10 +205,15 @@ body,
   padding-right: .4rem;
 }
 
-.my-1 {
-  margin-top: .2rem;
-  margin-bottom: .2rem;
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
+.pb-10 {
+  padding-bottom: 10rem;
+}
+
 
 .hover:hover {
   font-weight: bolder;
@@ -155,20 +222,40 @@ body,
 
 }
 
-.rounded-top {
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
-}
-
-.flex-base {
-  align-self: baseline;
-}
-
-.max-height {
+.max-height-4 {
   max-height: 4rem;
+}
+
+.max-h-full {
+  max-height: 100%;
+}
+
+.max-h-50 {
+  max-height: 50%;
+}
+
+.max-h-20 {
+  max-height: 20rem;
 }
 
 .max-fit {
   max-width: fit-content;
   max-height: fit-content;
+}
+
+.max-max {
+  max-width: max-content;
+  max-height: max-content;
+}
+
+.width-20 {
+  max-width: 20rem;
+}
+
+.width-10 {
+  width: 10rem;
+}
+
+.width-40-per {
+  width: 40%;
 }
