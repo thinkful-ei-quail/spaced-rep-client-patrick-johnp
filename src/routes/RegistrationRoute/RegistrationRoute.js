@@ -16,7 +16,7 @@ class RegistrationRoute extends Component {
 
   render() {
     return (
-      <section className='wrapper'>
+      <section className='wrapper box-shadow p-4 mt-1 m-1'>
         <p>
           Practice learning a language with the spaced reptition revision technique.
         </p>
