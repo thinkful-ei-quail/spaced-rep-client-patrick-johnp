@@ -21,9 +21,9 @@ export default class App extends Component {
   render() {
     const {hasError}=this.state
     return (
-      <div className='App'>
+      <div className='App flex width-full'>
         <Header />
-        <main className="center flex">
+        <main className="center flex width-full height-full">
           {hasError&&(
             <p>There was an error! Oh no!</p>
           )}
@@ -50,6 +50,12 @@ export default class App extends Component {
             />
           </Switch>
         </main>
+
+        <footer className="background-orange width-full flex flex-2 flex-base mt-1 max-height">
+          <div className="flex-1 text-bold background-orange px-2 text-white">
+            Practice learning a language with the spaced reptition revision technique.
+          </div>
+        </footer>
       </div>
     );
   }

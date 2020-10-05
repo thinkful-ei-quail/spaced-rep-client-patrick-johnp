@@ -13,9 +13,9 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-      <div className="header-cont height-full flex">
+      <div className="header-cont flex ">
 
-        <span className="text-white">
+        <span className="text-white ">
           {this.context.user.name}
         </span>
         <nav>
@@ -32,17 +32,17 @@ class Header extends Component {
   renderLoginLink() {
     return (
       <nav>
-        <Link to='/login' className="text-white py-2 m-1 hover rounded-top flex-1 text-dec-none">Login</Link>
+        <Link to='/login' className="text-white font-xl font-mono py-2 m-1 hover rounded-top flex-1 text-dec-none">Login</Link>
         {' '}
-        <Link to='/register' className="text-white py-2 m-1 rounded-top hover flex-1 text-dec-none ">Sign up</Link>
+        <Link to='/register' className="text-white font-xl font-mono py-2 m-1 rounded-top hover flex-1 text-dec-none ">Sign up</Link>
       </nav>
     )
   }
 
   render() {
     return (
-      <header className="header-cont background-green center width-full p-4 text-white height-full flex">
-        <h1 className="backgorund-green height-full flex-2">
+      <header className="header-cont bg-grad-to-r center width-full text-white flex">
+        <h1 className="backgorund-green  flex-2">
           <Link to='/' className="text-white  text-dec-none font-irish tracking-wide">
             Spaced repetition
           </Link>

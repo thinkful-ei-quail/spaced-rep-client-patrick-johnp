@@ -1,5 +1,18 @@
+html,
+body,
+#root,
+.App {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .height-full {
   height: 100%;
+}
+
+.width-full {
+  width: 100%;
 }
 
 .header-cont {
@@ -12,6 +25,10 @@
 
 .background-orange {
   background-color: #EB7335;
+}
+
+.bg-grad-to-r {
+  background-image: linear-gradient(to right, #0E6D3B, #42b53c, #0E6D3B);
 }
 
 .center {
@@ -57,6 +74,14 @@
   font-family: "irish";
 }
 
+.font-mono {
+  font-family: monospace;
+}
+
+.font-xl {
+  font-size: x-large;
+}
+
 .tracking-wide {
   letter-spacing: .2em;
 }
@@ -69,10 +94,13 @@
   text-shadow: .1rem .1rem .2rem lightgray;
 }
 
+.text-bold {
+  font-weight: bold;
+}
+
 .border {
   border: .1rem solid gray;
 }
-
 
 .m-1 {
   margin: 1em;
@@ -82,6 +110,10 @@
   margin-top: 1em;
 }
 
+.mx-2 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
 
 .rounded {
   border-radius: 3rem;
@@ -91,14 +123,19 @@
   border-radius: 1rem;
 }
 
-.py-2 {
+.px-2 {
   padding-left: 1rem;
   padding-right: 1rem;
 }
 
-.px-1 {
+.py-1 {
   padding-top: .2rem;
   padding-bottom: .2rem;
+}
+
+.px-2 {
+  padding-left: .4rem;
+  padding-right: .4rem;
 }
 
 .my-1 {
@@ -108,13 +145,28 @@
 
 
 .hover:hover {
-  background-color: #70c45f;
-  opacity: .5;
+
+  font-weight: bolder;
+  text-shadow: .1rem .1rem .2rem slategrey;
+  padding-bottom: .3rem;
+
 }
-
-
 
 .rounded-top {
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
+}
+
+
+.flex-base {
+  align-self: baseline;
+}
+
+.max-height {
+  max-height: 4rem;
+}
+
+.max-fit {
+  max-width: fit-content;
+  max-height: fit-content;
 }

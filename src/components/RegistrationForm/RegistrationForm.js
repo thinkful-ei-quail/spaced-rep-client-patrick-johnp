@@ -1,35 +1,35 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Input, Required, Label } from '../Form/Form';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
+import {Input, Required, Label} from '../Form/Form';
 import AuthApiService from '../../services/auth-api-service';
 import Button from '../Button/Button';
 import './RegistrationForm.css';
 
 class RegistrationForm extends Component {
-  static defaultProps = {
+  static defaultProps={
     onRegistrationSuccess: () => {},
   };
 
-  state = { error: null };
+  state={error: null};
 
-  firstInput = React.createRef();
+  firstInput=React.createRef();
 
-  handleSubmit = (ev) => {
+  handleSubmit=(ev) => {
     ev.preventDefault();
-    const { name, username, password } = ev.target;
+    const {name, username, password}=ev.target;
     AuthApiService.postUser({
       name: name.value,
       username: username.value,
       password: password.value,
     })
       .then((user) => {
-        name.value = '';
-        username.value = '';
-        password.value = '';
+        name.value='';
+        username.value='';
+        password.value='';
         this.props.onRegistrationSuccess();
       })
       .catch((res) => {
-        this.setState({ error: res.error });
+        this.setState({error: res.error});
       });
   };
 
@@ -38,12 +38,13 @@ class RegistrationForm extends Component {
   }
 
   render() {
-    const { error } = this.state;
+    const {error}=this.state;
     return (
-      <form class='registration-form' onSubmit={this.handleSubmit}>
-        <div role="alert">{error && <p>{error}</p>}</div>
-        <div class='registration-row'>
-          <Label htmlFor="registration-name-input">
+      <form className='registration-form flex font-xl font-mono '
+        onSubmit={this.handleSubmit}>
+        <div className=" flex-1" role="alert">{error&&<p>{error}</p>}</div>
+        <div className='flex flex-1'>
+          <Label htmlFor="registration-name-input" className="flex-1">
             Enter your name
             <Required />
           </Label>
@@ -52,17 +53,18 @@ class RegistrationForm extends Component {
             id="registration-name-input"
             name="name"
             required
+            className="flex-1 my-1"
           />
         </div>
-        <div class='registration-row'>
-          <Label htmlFor="registration-username-input">
+        <div className='flex flex-1'>
+          <Label htmlFor="registration-username-input" className="flex-1">
             Choose a username
             <Required />
           </Label>
-          <Input id="registration-username-input" name="username" required />
+          <Input id="registration-username-input" name="username" required className='flex-1 my-1' />
         </div>
-        <div class='registration-row'>
-          <Label htmlFor="registration-password-input">
+        <div className='flex-1 flex'>
+          <Label htmlFor="registration-password-input" className='flex-1'>
             Choose a password
             <Required />
           </Label>
@@ -71,11 +73,12 @@ class RegistrationForm extends Component {
             name="password"
             type="password"
             required
+            className='flex-1 my-1'
           />
         </div>
-        <footer class='registration-footer'>
-          <Button type="submit" className='rounded hover px-1 py-2'>Sign up</Button>{' '}
-          <Link to="/login">Already have an account?</Link>
+        <footer className='flex-1 flex'>
+          <Button type="submit" className='rounded flex-1 hover px-1 py-2 font-xl font-mono '>Sign up</Button>{' '}
+          <Link to="/login" className="flex-1">Already have an account?</Link>
         </footer>
       </form>
     );

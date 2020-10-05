@@ -17,8 +17,8 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section className="box-shadow rounded-light p-4 mt-1 m-1 flex flex-1">
-        <h2 className=" font-irish flex-2 text-shadow">Login</h2>
+      <section className="box-shadow rounded-light p-4 mt-1 m-1 flex center max-fit">
+        <h2 className=" font-irish flex-1 text-shadow">Login</h2>
         <LoginForm
           onLoginSuccess={this.handleLoginSuccess}
         />
