@@ -13,13 +13,13 @@ class Header extends Component {
 
   renderLogoutLink() {
     return (
-      <div className="header-cont flex ">
+      <div className="flex-1 flex flex-row center rounded-top background-green mx-2">
 
-        <span className="text-white ">
-          {this.context.user.name}
+        <span className="text-white font-irish font-xl flex-1 mx-2">
+          {this.context.user.name}'s Dashboard
         </span>
         <nav>
-          <Link className=""
+          <Link className="text-white mx-2 flex-1 text-dec-none font-irish tracking-wide hover"
             onClick={this.handleLogoutClick}
             to='/login'>
             Logout
@@ -31,7 +31,7 @@ class Header extends Component {
 
   renderLoginLink() {
     return (
-      <nav>
+      <nav className=" flex flex-1 flex-row">
         <Link to='/login' className="text-white font-xl font-mono py-2 m-1 hover rounded-top flex-1 text-dec-none">Login</Link>
         {' '}
         <Link to='/register' className="text-white font-xl font-mono py-2 m-1 rounded-top hover flex-1 text-dec-none ">Sign up</Link>
@@ -41,9 +41,9 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header-cont bg-grad-to-r center width-full text-white flex">
-        <h1 className="backgorund-green  flex-2">
-          <Link to='/' className="text-white  text-dec-none font-irish tracking-wide">
+      <header className="header-cont bg-grad-to-r center width-full font-mono font-xl text-white flex ">
+        <h1 className="backgorund-green  flex-1">
+          <Link to='/' className="text-white text-dec-none font-irish tracking-wide">
             Spaced repetition
           </Link>
         </h1>

@@ -52,7 +52,7 @@ export default class App extends Component {
         </main>
 
         <footer className="background-orange width-full flex flex-2 flex-base mt-1 max-height">
-          <div className="flex-1 text-bold background-orange px-2 text-white">
+          <div className="flex-1 text-bold background-orange px-2 text-white center tracking-wide font-mono font-xl">
             Practice learning a language with the spaced reptition revision technique.
           </div>
         </footer>
