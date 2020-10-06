@@ -7,68 +7,124 @@ body,
   margin: 0;
 }
 
-.height-full {
-  height: 100%;
+.align-left {
+  align-self: flex-start;
+  text-align: left;
 }
 
-.width-full {
-  width: 100%;
+@keyframes gentle-wiggle {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  80% {
+    transform: rotate(0deg);
+  }
+
+  85% {
+    transform: rotate(.5deg);
+  }
+
+  95% {
+    transform: rotate(-.1deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.anim {
+  animation: gentle-wiggle 2s infinite;
+
 }
 
 .background-green {
-  background-color: #0E6D3B;
+  background-color: #0e6d3b;
+}
+
+.bg-invis {
+  background-color: transparent;
 }
 
 .background-orange {
-  background-color: #EB7335;
+  background-color: #eb7335;
 }
-
 
 .background-lightgrey,
 .background-lightgray {
   background-color: lightgray;
-
-}
-
-.transition:hover {
-  transition: ease-in-out, .1s;
-  transform: rotate(1deg);
-  transform: scale(1.25);
-  transition-delay: .01s;
 }
 
 .bg-grad-to-r {
   /* background-image: linear-gradient(to right, #6dbf71, #0E6D3B, #6dbf71); */
-  background-image: linear-gradient(to bottom, #6dbf71, #0E6D3B, #6dbf71);
+  background-image: linear-gradient(to bottom, #6dbf71, #0e6d3b, #6dbf71);
 }
 
 .tricolor-grad {
-  background-image: linear-gradient(to right, #0E6D3B, white, #EB7335);
+  background-image: linear-gradient(to right, #0e6d3b, white, #eb7335);
+}
+
+.box-shadow {
+  box-shadow: 0.2em 0.2em 0.2rem lightgrey;
+}
+
+.box-shadow-dark {
+  box-shadow: 0.2em 0.2em 0.2rem grey;
+}
+
+.shadow-none {
+  box-shadow: none;
+}
+
+.border {
+  border: 0.1rem solid gray;
+}
+
+.border-none {
+  border: transparent;
+}
+
+.rounded {
+  border-radius: 3rem;
+}
+
+.rounded-light {
+  border-radius: 1rem;
+}
+
+.rounded-hard {
+  border-radius: 10rem;
+}
+
+.rounded-tr-bl {
+  border-top-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+.rounded-tr-br {
+  border-top-right-radius: 3rem;
+  border-bottom-right-radius: 3rem;
+}
+
+.rounded-tl-bl {
+  border-top-left-radius: 3rem;
+  border-bottom-left-radius: 3rem;
+}
+
+.rounded-top {
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+}
+
+.rounded-b {
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 
 .center {
   align-self: center;
   text-align: center;
-}
-
-.text-white {
-  color: white;
-}
-
-.text-red {
-  color: firebrick;
-}
-
-.text-green {
-  color: #0E6D3B;
-}
-
-.text-light-gray {
-  color: lightgray;
-}
-
-.text-dec-none {
-  text-decoration: none;
 }
 
 .flex {
@@ -89,6 +145,12 @@ body,
   flex-wrap: wrap;
 }
 
+.flex-row-nowrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -103,7 +165,7 @@ body,
 
 @font-face {
   font-family: "irish";
-  src: url('../../assets/font/irish_penny/IrishPenny.ttf');
+  src: url("../../assets/font/irish_penny/IrishPenny.ttf");
 }
 
 .font-irish {
@@ -118,32 +180,130 @@ body,
   font-size: x-large;
 }
 
-.tracking-wide {
-  letter-spacing: .2em;
+
+.font-header {
+  font-size: 2rem;
 }
 
-.box-shadow {
-  box-shadow: .2em .2em .2rem lightgrey;
+.font-xxl {
+  font-size: 4rem;
+}
+
+.tracking-wide {
+  letter-spacing: 0.2em;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-red {
+  color: firebrick;
+}
+
+.text-green {
+  color: #0e6d3b;
+}
+
+.text-outline {
+  -webkit-text-stroke: 2px white;
+  color: transparent;
+}
+
+.text-light-gray {
+  color: lightgray;
+}
+
+.text-dec-none {
+  text-decoration: none;
 }
 
 .text-shadow {
-  text-shadow: .1rem .1rem .2rem lightgray;
+  text-shadow: 0.1rem 0.1rem 0.2rem lightgray;
 }
 
-.box-shadow-dark {
-  box-shadow: .2em .2em .2rem grey;
+.text-glow {
+  text-shadow: 0.01rem 0.01rem 0.2rem lime;
 }
 
 .text-bold {
   font-weight: bold;
 }
 
-.border {
-  border: .1rem solid gray;
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.focus:focus {
+  outline: rgba(55, 211, 60, 0.3);
+  transition: ease-in, 0.1s;
+  transform: scale(1.25);
+  transition-delay: 0.01s;
+
+  text-decoration: underline;
+}
+
+.hoverbutt:hover {
+  font-weight: bolder;
+  text-shadow: 0.01rem 0.01rem 0.2rem lime;
+  padding-bottom: 0.3rem;
+}
+
+.input:hover,
+.input:focus {
+  border: mediumseagreen .3rem double;
+}
+
+.hovernone:hover {
+  outline: none;
+  margin-right: 1em;
+}
+
+.linkhover:hover {
+  transition: ease-in, 0.3s;
+  color: whitesmoke;
+  transform: scale(1.25);
+  transition-delay: 0.01s;
+  letter-spacing: normal;
+  text-shadow: 0.2em 0.2em 0.2rem orange;
+}
+
+.transition:hover {
+  transition: ease-in-out, 0.1s;
+  transform: scale(1.5);
+  transition-delay: 0.01s;
+}
+
+.justify {
+  justify-items: center;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 2;
+  flex-grow: 1;
+}
+
+.pos-fixed {
+  position: sticky;
 }
 
 .m-1 {
-  margin: .5em;
+  margin: 0.5em;
+}
+
+.m-2 {
+  margin: 1em;
+}
+
+.m-4 {
+  margin: 2em;
+}
+
+.m-8 {
+  margin: 4em;
 }
 
 .mt-1 {
@@ -158,51 +318,50 @@ body,
   margin-bottom: 10rem;
 }
 
+.mr-2 {
+  margin-left: 0rem;
+  margin-right: 15rem;
+}
+
 .mx-2 {
   margin-left: 4rem;
   margin-right: 4rem;
 }
 
+.mx-4 {
+  margin-left: 8rem;
+  margin-right: 8rem;
+}
+
+.ml-25-mr-10 {
+  margin-left: 27%;
+  margin-right: 10%;
+}
+
+.mx-10 {
+  margin-right: 10%;
+  margin-left: 10%;
+}
+
 .my-1 {
-  margin-top: .2rem;
-  margin-bottom: .2rem;
-}
-
-.rounded {
-  border-radius: 3rem;
-}
-
-.rounded-light {
-  border-radius: 1rem;
-}
-
-.rounded-top {
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
-}
-
-.rounded-b {
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.2rem;
 }
 
 .p-4 {
   padding: 2rem;
 }
 
-.px-2 {
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
+
 
 .py-1 {
-  padding-top: .2rem;
-  padding-bottom: .2rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 .px-2 {
-  padding-left: .4rem;
-  padding-right: .4rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
 }
 
 .px-4 {
@@ -212,14 +371,6 @@ body,
 
 .pb-10 {
   padding-bottom: 10rem;
-}
-
-
-.hover:hover {
-  font-weight: bolder;
-  text-shadow: .1rem .1rem .2rem slategrey;
-  padding-bottom: .3rem;
-
 }
 
 .max-height-4 {
@@ -256,6 +407,22 @@ body,
   width: 10rem;
 }
 
-.width-40-per {
-  width: 40%;
+.width-60-per {
+  width: 60%;
+}
+
+.height-full {
+  height: 100%;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.height-cont {
+  height: max-content;
+}
+
+.height-fit {
+  height: fit-content;
 }

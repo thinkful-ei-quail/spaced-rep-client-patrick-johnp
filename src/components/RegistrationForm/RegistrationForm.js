@@ -40,10 +40,10 @@ class RegistrationForm extends Component {
   render() {
     const {error}=this.state;
     return (
-      <form className='registration-form flex font-xl font-mono '
+      <form className='registration-form flex-row-wrap justify font-xl font-mono '
         onSubmit={this.handleSubmit}>
         <div className=" flex-1" role="alert">{error&&<p>{error}</p>}</div>
-        <div className='flex flex-1'>
+        <div className='flex-col-wrap justify flex-1'>
           <Label htmlFor="registration-name-input" className="flex-1">
             Enter your name
             <Required />
@@ -56,14 +56,14 @@ class RegistrationForm extends Component {
             className="flex-1 my-1"
           />
         </div>
-        <div className='flex flex-1'>
+        <div className='flex-col-wrap justify flex-1'>
           <Label htmlFor="registration-username-input" className="flex-1">
             Choose a username
             <Required />
           </Label>
           <Input id="registration-username-input" name="username" required className='flex-1 my-1' />
         </div>
-        <div className='flex-1 flex'>
+        <div className='flex-1 justify flex-col-wrap'>
           <Label htmlFor="registration-password-input" className='flex-1'>
             Choose a password
             <Required />
@@ -76,7 +76,7 @@ class RegistrationForm extends Component {
             className='flex-1 my-1'
           />
         </div>
-        <div className='flex-1 flex'>
+        <div className='flex-1 justify flex-col-wrap'>
           <Button type="submit" className='rounded flex-1 hover px-1 py-2 font-xl font-mono '>Sign up</Button>{' '}
           <Link to="/login" className="flex-1">Already have an account?</Link>
         </div>

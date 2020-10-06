@@ -10,19 +10,19 @@ class Header extends Component {
   handleLogoutClick=() => {
     this.context.processLogout()
   }
-
+  // {this.context.user.username}'s
   renderLogoutLink() {
     return (
-      <div className="flex-1 flex flex-row center rounded-top mx-2">
+      <div className="flex-1 flex-col rounded-top mx-2 center">
+        <nav className="flex-1 flex-row rounded-top ">
+          <Link to="/" className="text-white flex-1 text-dec-none font-irish tracking-wide linkhover"><h3>
+            Dashboard</h3>
+          </Link>
 
-        <span className="text-white font-irish font-xl flex-1 mx-2">
-          {this.context.user.name}'s Dashboard
-        </span>
-        <nav>
-          <Link className="text-white mx-2 flex-1 text-dec-none font-irish tracking-wide hover"
+          <Link className="text-white mx-2 flex-1 text-dec-none font-irish tracking-wide linkhover"
             onClick={this.handleLogoutClick}
-            to='/login'>
-            Logout
+            to='/login'><h3>
+              Logout</h3>
           </Link>
         </nav>
       </div>
@@ -31,22 +31,24 @@ class Header extends Component {
 
   renderLoginLink() {
     return (
-      <nav className=" flex flex-1 flex-row">
-        <Link to='/login' className="text-white font-xl font-mono py-2 m-1 hover rounded-top flex-1 text-dec-none">Login</Link>
+      <nav className="flex-1 flex-row rounded-top  center">
+        <Link to='/login' className="text-white font-xl font-mono py-2 m-1 linkhover rounded-top flex-1 text-dec-none">Login</Link>
         {' '}
-        <Link to='/register' className="text-white font-xl font-mono py-2 m-1 rounded-top hover flex-1 text-dec-none ">Sign up</Link>
+        <Link to='/register' className="text-white font-xl font-mono py-2 m-1 rounded-top linkhover flex-1 text-dec-none ">Sign up</Link>
       </nav>
     )
   }
 
   render() {
     return (
-      <header className="header-cont bg-grad-to-r center rounded width-full font-mono font-xl text-white flex ">
-        <h1 className="flex-1">
-          <Link to='/' className="text-white text-dec-none font-irish tracking-wide">
+      <header className="height-cont bg-grad-to-r center rounded-tr-bl width-full mx-10 font-mono font-xl text-white flex ">
+
+        <Link to='/' className="text-white text-dec-none font-header font-irish tracking-wide">
+          <h1 className="flex-1 text-outline">
             Spaced repetition
-          </Link>
-        </h1>
+            </h1>
+        </Link>
+
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           :this.renderLoginLink()}

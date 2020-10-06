@@ -1,4 +1,4 @@
-
+import LanguageService from "../services/language-service";
 import React from 'react'
 
 const LanguageContext=React.createContext({
@@ -9,6 +9,7 @@ const LanguageContext=React.createContext({
   clearLangError: () => {},
   setLanguage: () => {},
   setWords: () => {},
+  getWordByID: () => {},
 
 })
 export default LanguageContext;
@@ -24,7 +25,17 @@ export class LanguageProvider extends React.Component {
     }
     this.state=state;
   }
-  setLangError=error => {
+
+  componentDidMount() {
+    LanguageService.getLanguageWords()
+      .then(res => {
+        this.setLanguage(res.language)
+        this.setWords(res.words)
+      })
+  }
+
+
+  setLangError=(error) => {
     console.error(error)
     this.setState({error})
   }
@@ -49,12 +60,16 @@ export class LanguageProvider extends React.Component {
     this.setState({words: [...this.state.words, this.state.words[wordId-1].incorrect_count+1]})
   }
 
+  getWordByID=(id) => {
+    return this.state.words.find(word => {return word.id===id})
+  }
 
 
   render() {
     const value={
       language: this.state.language,
       words: this.state.words,
+      getWordByID: this.getWordByID,
       setLangError: this.setLangError,
       clearError: this.clearLangError,
       setLanguage: this.setLanguage,
