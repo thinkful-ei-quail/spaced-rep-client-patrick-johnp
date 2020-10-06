@@ -15,7 +15,7 @@ const AuthApiService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json()
       )
-  },
+  }, 
   postLogin({ username, password }) {
     return fetch(`${config.API_ENDPOINT}/auth/token`, {
       method: 'POST',
