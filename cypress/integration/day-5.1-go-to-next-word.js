@@ -8,7 +8,7 @@
   - I'm presented with a button that I can click to learn another word
   - When clicking on the button I see the next word to learn
 */
-describe(`User story: Go to next word`, function() {
+describe(`User story: Go to next word`, function () {
   beforeEach(() => {
     cy.server()
       .route({

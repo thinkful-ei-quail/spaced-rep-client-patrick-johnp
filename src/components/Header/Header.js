@@ -15,11 +15,11 @@ class Header extends Component {
     return (
 
       <nav className="flex-1 flex-row-nowrap justify m-1 pos-bottom ">
-        <Link to="/"
+        <h2
           className="text-white font-nav flex-1  mx-2  text-dec-none
-          tracking-wide linkhover m-1 font-mono">
-          {this.context.user.username}
-        </Link>
+          tracking-wide linkhover m-1 font-mono">{this.context.user.name}
+
+        </h2>
 
         <Link
           className="text-white mx-2 font-nav flex-1 text-dec-none
@@ -44,7 +44,7 @@ class Header extends Component {
         <Link to='/register'
           className="text-white mx-2 font-nav flex-1 text-dec-none
        tracking-wide linkhover m-1">
-          Register</Link>
+          Sign up</Link>
       </nav>
     )
   }
@@ -53,7 +53,7 @@ class Header extends Component {
     return (
       <header className="bg-grad-to-r flex-1 justify center rounded-tr-bl
       width-full m-1 font-mono font-xl text-white flex-row-wrap height-fit">
-
+        {this.context.user.username}
         <Link to='/' className="text-white text-dec-none font-header font-irish tracking-widest">
           <h1 className="linkhover text-outline">
             Spaced repetition

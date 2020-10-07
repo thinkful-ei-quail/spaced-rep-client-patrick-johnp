@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Input, Label, Required} from '../Form/Form'
+import {Input, Label} from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
@@ -50,29 +50,29 @@ class LoginForm extends Component {
         <div role='alert' className=" flex-1">
           {error&&<p className="font-xxl text-red">{error}</p>}
         </div>
-        <div className="flex-row justify flex-1">
-          <Label htmlFor='loginputnbox'
-            className=" flex-1">
+        <div className="flex-row justify flex-1 width-full m-1">
+          <Label htmlFor='login-username-input'
+            className="width-0 text-white">
             Username
-            <Required />
+
           </Label>
           <Input className="flex-1 border-none font-xl"
             ref={this.firstInput}
             placeholder="username here"
-            id='loginputnbox'
+            id='login-username-input'
             name='username'
             required
           />
         </div>
-        <div className="flex-1 justify flex-row">
-          <Label htmlFor='loginputpbox'
-            className="flex-1">
+        <div className="flex-1 justify flex-row width-full m-1">
+          <Label htmlFor='login-password-input'
+            className="width-0 text-white">
             Password
-            <Required />
+
           </Label>
           <Input className="font-xl border-none flex-1"
             placeholder="password here"
-            id='loginputpbox'
+            id='login-password-input'
             name='password'
             type='password'
             required

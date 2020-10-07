@@ -13,7 +13,7 @@
   - I'm told how many times I was correct or incorrect for the word
   - I can see a button/link to try another word
 */
-describe(`User story: Answer feedback`, function() {
+describe(`User story: Answer feedback`, function () {
   beforeEach(() => {
     cy.server()
       .route({
@@ -37,7 +37,7 @@ describe(`User story: Answer feedback`, function() {
     })
 
     it(`submits my answer typed in the form`, () => {
-      const guess = 'my-test-guess'
+      const guess='my-test-guess'
 
       cy.login().visit(`/learn`)
       cy.wait('@languageHeadRequest')
@@ -50,14 +50,14 @@ describe(`User story: Answer feedback`, function() {
 
         cy.wait('@postListGuess')
           .then(xhr => {
-            expect(xhr.request.body).to.eql({ guess })
+            expect(xhr.request.body).to.eql({guess})
           })
       })
     })
   })
 
   context(`Given guess is incorrect`, () => {
-    const guess = 'test-guess-incorrect'
+    const guess='test-guess-incorrect'
 
     beforeEach(() => {
       cy.route({
@@ -75,14 +75,14 @@ describe(`User story: Answer feedback`, function() {
 
     it(`displays score and feedback the word was incorrect`, () => {
       //  cypress fixtures has buggy behaviour, this works around it o_O
-      const fixtures = []
+      const fixtures=[]
       Cypress.Promise.all([
         cy.fixture('language-head.json')
-          .then(langHeadFx => fixtures.push(langHeadFx)),
+        ,
         cy.fixture('language-guess-incorrect.json')
-          .then(langGuessIncFx => fixtures.push(langGuessIncFx)),
-      ]).then(() => {
-        const [languageHeadFixture, incorrectFixture] = fixtures
+        ,
+      ]).then((fixtures) => {
+        const [languageHeadFixture, incorrectFixture]=fixtures
 
         cy.get('main').within($main => {
           cy.get('.DisplayScore p')
@@ -111,7 +111,7 @@ describe(`User story: Answer feedback`, function() {
   })
 
   context(`Given guess is correct`, () => {
-    const guess = 'test-guess-incorrect'
+    const guess='test-guess-incorrect'
 
     beforeEach(() => {
       cy.route({
@@ -129,20 +129,20 @@ describe(`User story: Answer feedback`, function() {
 
     it(`gives feedback the word was correct`, () => {
       //  cypress fixtures has buggy behaviour, this works around it o_O
-      const fixtures = []
+      const fixtures=[]
       Cypress.Promise.all([
         cy.fixture('language-head.json')
-          .then(fx => fixtures.push(fx)),
+        ,
         cy.fixture('language-guess-correct.json')
-          .then(fx => fixtures.push(fx)),
-      ]).then(() => {
-        const [languageHeadFixture, incorrectFixture] = fixtures
+        ,
+      ]).then((fixtures) => {
+        const [languageHeadFixture, correctFixture]=fixtures
 
         cy.get('main').within($main => {
           cy.get('.DisplayScore p')
             .should(
               'have.text',
-              `Your total score is: ${incorrectFixture.totalScore}`,
+              `Your total score is: ${correctFixture.totalScore}`,
             )
           cy.get('h2')
             .should(
@@ -152,7 +152,7 @@ describe(`User story: Answer feedback`, function() {
           cy.get('.DisplayFeedback p')
             .should(
               'have.text',
-              `The correct translation for ${languageHeadFixture.nextWord} was ${incorrectFixture.answer} and you chose ${guess}!`,
+              `The correct translation for ${languageHeadFixture.nextWord} was ${correctFixture.answer} and you chose ${guess}!`,
             )
           cy.get('button')
             .should(
