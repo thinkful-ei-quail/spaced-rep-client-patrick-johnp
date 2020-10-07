@@ -51,26 +51,26 @@ class LoginForm extends Component {
           {error&&<p className="font-xxl text-red">{error}</p>}
         </div>
         <div className="flex-row justify flex-1">
-          <Label htmlFor='loginputnbox'
+          <Label htmlFor='login-username-input'
             className=" flex-1">
             Username
           </Label>
           <Input className="flex-1 border-none font-xl"
             ref={this.firstInput}
             placeholder="username here"
-            id='loginputnbox'
+            id='login-username-input'
             name='username'
             required
           />
         </div>
         <div className="flex-1 justify flex-row">
-          <Label htmlFor='loginputpbox'
+          <Label htmlFor='login-password-input'
             className="flex-1">
             Password
           </Label>
           <Input className="font-xl border-none flex-1"
             placeholder="password here"
-            id='loginputpbox'
+            id='login-password-input'
             name='password'
             type='password'
             required
