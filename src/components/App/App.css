@@ -248,7 +248,6 @@ body,
 .hoverbutt:hover {
   font-weight: bolder;
   text-shadow: 0.01rem 0.01rem 0.2rem lime;
-  padding-bottom: 0.3rem;
 }
 
 .input:hover,
@@ -259,6 +258,10 @@ body,
 .hovernone:hover {
   outline: none;
   margin-right: 1em;
+}
+
+.outline-none:hover {
+  outline: none;
 }
 
 .linkhover:hover {
