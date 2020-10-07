@@ -46,8 +46,8 @@ class DashboardRoute extends Component {
     return (
       <section className="font-mono flex-row-wrap text-green
       px-2 justify center max-h-full max-fit pb-10 mb-10">
-        <div className="flex-2 font-xl">You're Learning: {language.name}</div>
-        <div className="flex-2 font-xl ">Total Score: {language.total_score}</div>
+        <div className="flex-2 font-xl"><h2>You're Learning: {language.name}</h2></div>
+        <div className="flex-2 font-xl "><h2>Total Score: {language.total_score}</h2></div>
         <div>
           <ErrorBoundary>
             <button className="text-white font-mono py-2 m-1 hover

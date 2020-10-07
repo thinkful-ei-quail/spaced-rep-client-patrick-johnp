@@ -9,7 +9,7 @@ export default function WordCard(props) {
     pronounce: `https://www.teanglann.ie/en/fuaim/${word.nextWord}`
   }
   return (
-    <div className="flex-col flex-1 font-xl max-fit center justify">
+    <li className="flex-col flex-1 font-xl max-fit center justify">
       <div className="flex-1">Rights: {word.wordCorrectCount}</div>
       <div className="flex-1 text-red">Wrongs: {word.wordIncorrectCount}</div>
       <div className="flex-1 text-bold text-black">Totals: {word.totalScore}</div>
@@ -18,7 +18,7 @@ export default function WordCard(props) {
           {word.nextWord}
         </a>
       </h2>
-    </div>
+    </li>
   )
 }
 

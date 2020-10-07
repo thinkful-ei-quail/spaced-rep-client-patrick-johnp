@@ -18,7 +18,7 @@ class Header extends Component {
         <Link to="/"
           className="text-white font-nav flex-1  mx-2  text-dec-none
           tracking-wide linkhover m-1 font-mono">
-          Dashboard
+          {this.context.user.username}
         </Link>
 
         <Link
