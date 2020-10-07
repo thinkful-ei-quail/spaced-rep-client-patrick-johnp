@@ -185,6 +185,11 @@ body,
   font-family: monospace;
 }
 
+
+.font-lg {
+  font-size: large;
+}
+
 .font-xl {
   font-size: x-large;
 }
@@ -205,6 +210,10 @@ body,
   letter-spacing: 0.2em;
 }
 
+.tracking-widest {
+  letter-spacing: 0.5em;
+}
+
 .text-white {
   color: white;
 }
@@ -222,7 +231,7 @@ body,
 }
 
 .text-outline {
-  -webkit-text-stroke: 2px white;
+  -webkit-text-stroke: .3px white;
   color: transparent;
 }
 
@@ -283,11 +292,12 @@ body,
 
 .linkhover:hover {
   transition: ease-in, 0.3s;
-  color: whitesmoke;
-  transform: scale(1.25);
+  transform: scale(1.1);
   transition-delay: 0.01s;
-  letter-spacing: normal;
-  text-shadow: 0.2em 0.2em 0.2rem orange;
+  font-weight: 900;
+  -webkit-text-stroke: 2px goldenrod;
+  color: transparent;
+  text-shadow: 0.1em 0.1em 2rem white;
 }
 
 .transition:hover {

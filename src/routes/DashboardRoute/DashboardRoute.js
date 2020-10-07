@@ -31,7 +31,8 @@ class DashboardRoute extends Component {
     const {words}=this.state;
     return (
       words.map(word =>
-        <div className="flex-row-wrap background-lightgrey box-shadow-dark center m-1 max-fit transition font-xl
+        <div className="flex-row-wrap background-lightgrey box-shadow-dark
+        center m-1 max-fit transition font-xl
         px-4 shadow rounded-light hover" key={word.id}>
           <h3 className="font-mono flex-1">{word.original}</h3>
           <p className="flex-1 font-xl">Correct: {word.correct_count}</p>
@@ -43,14 +44,18 @@ class DashboardRoute extends Component {
   render() {
     const {language}=this.state;
     return (
-      <section className="font-mono flex-row-wrap text-green px-2 justify max-h-full max-fit pb-10 mb-10">
+      <section className="font-mono flex-row-wrap text-green
+      px-2 justify center max-h-full max-fit pb-10 mb-10">
         <div className="flex-2 font-xl">You're Learning: {language.name}</div>
         <div className="flex-2 font-xl ">Total Score: {language.total_score}</div>
         <div>
           <ErrorBoundary>
-            <button className="text-white font-xl font-mono py-2 m-1 hover rounded flex-1 box-shadow hoverbutt text-dec-none transition border-none">
-              <Link to="/learn" className="text-white font-xl font-mono py-2 m-1  rounded-top text-dec-none">
-                Learning
+            <button className="text-white font-mono py-2 m-1 hover
+            rounded flex-1 box-shadow anim hoverbutt text-dec-none transition border-none">
+              <Link to="/learn"
+                className="text-white font-xxl font-mono py-2 m-1
+              rounded-top text-dec-none">
+                Start Learning
                 </Link>
             </button>
           </ErrorBoundary>

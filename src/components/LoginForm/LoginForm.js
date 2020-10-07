@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Input, Label} from '../Form/Form'
+import {Input, Label, Required} from '../Form/Form'
 import AuthApiService from '../../services/auth-api-service'
 import UserContext from '../../contexts/UserContext'
 import Button from '../Button/Button'
@@ -44,9 +44,9 @@ class LoginForm extends Component {
     const {error}=this.state
     return (
       <form
-        className='LoginForm flex-col center box-shadow-xl p-4 rounded justify width-60-per height-fit font-nav font-mono '
-        onSubmit={this.handleSubmit}
-      >
+        className='LoginForm flex-col center box-shadow-xl p-4 rounded justify width-60-per
+        height-fit font-nav font-mono '
+        onSubmit={this.handleSubmit}>
         <div role='alert' className=" flex-1">
           {error&&<p className="font-xxl text-red">{error}</p>}
         </div>
@@ -54,6 +54,7 @@ class LoginForm extends Component {
           <Label htmlFor='loginputnbox'
             className=" flex-1">
             Username
+            <Required />
           </Label>
           <Input className="flex-1 border-none font-xl"
             ref={this.firstInput}
@@ -67,6 +68,7 @@ class LoginForm extends Component {
           <Label htmlFor='loginputpbox'
             className="flex-1">
             Password
+            <Required />
           </Label>
           <Input className="font-xl border-none flex-1"
             placeholder="password here"
@@ -77,7 +79,8 @@ class LoginForm extends Component {
           />
         </div>
         <Button type='submit'
-          className="rounded hoverbutt border-none flex-1 transition center m-2 font-xxl font-mono ">
+          className="rounded hoverbutt border-none flex-1
+           transition center m-2 font-xxl font-mono ">
           Login
         </Button>
       </form>

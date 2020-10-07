@@ -40,45 +40,63 @@ class RegistrationForm extends Component {
   render() {
     const {error}=this.state;
     return (
-      <form className='registration-form flex-row-wrap justify font-xl font-mono '
+      <form className='flex-col center box-shadow-xl p-4 rounded justify
+      height-fit font-nav font-mono '
         onSubmit={this.handleSubmit}>
-        <div className=" flex-1" role="alert">{error&&<p>{error}</p>}</div>
-        <div className='flex-col-wrap justify flex-1'>
-          <Label htmlFor="registration-name-input" className="flex-1">
-            Enter your name
+        <div className=" flex-1" role="alert">
+          {error&&<p className="font-xxl text-red">{error}</p>}
+        </div>
+        <div className='flex-row justify flex-1'>
+          <Label htmlFor="registration-name-input"
+            className="flex-1">
+            Nick Name
             <Required />
           </Label>
           <Input
+            placeholder="nick name here"
             ref={this.firstInput}
             id="registration-name-input"
             name="name"
             required
-            className="flex-1 my-1"
+            className="flex-1 border-none font-xl"
           />
         </div>
-        <div className='flex-col-wrap justify flex-1'>
-          <Label htmlFor="registration-username-input" className="flex-1">
-            Choose a username
-            <Required />
-          </Label>
-          <Input id="registration-username-input" name="username" required className='flex-1 my-1' />
-        </div>
-        <div className='flex-1 justify flex-col-wrap'>
-          <Label htmlFor="registration-password-input" className='flex-1'>
-            Choose a password
+        <div className='flex-1 justify flex-row'>
+          <Label htmlFor="registration-username-input"
+            className="flex-1">
+            Username
             <Required />
           </Label>
           <Input
+            id="registration-username-input"
+            name="username" required
+            placeholder="username here"
+            className='flex-1 border-none font-xl' />
+        </div>
+        <div className='flex-1 justify flex-row'>
+          <Label htmlFor="registration-password-input"
+            className='flex-1'>
+            Password
+            <Required />
+          </Label>
+          <Input
+            placeholder="password here"
             id="registration-password-input"
             name="password"
             type="password"
             required
-            className='flex-1 my-1'
+            className='flex-1 border-none font-xl'
           />
         </div>
-        <div className='flex-1 justify flex-col-wrap'>
-          <Button type="submit" className='rounded flex-1 hover px-1 py-2 font-xl font-mono '>Sign up</Button>{' '}
-          <Link to="/login" className="flex-1">Already have an account?</Link>
+        <div className='flex-1 justify flex-row'>
+          <Button type="submit"
+            className='rounded hoverbutt border-none flex-1
+            transition center m-2 font-xxl font-mono '
+          >Sign up</Button>
+          {'  '}
+          <Link to="/login"
+            className="flex-1 text-green hoverbutt transition">
+            Already have an account?</Link>
         </div>
       </form>
     );
