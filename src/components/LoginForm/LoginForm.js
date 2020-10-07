@@ -53,6 +53,7 @@ class LoginForm extends Component {
         <div className="flex-row justify flex-1 width-full m-1">
           <Label htmlFor='login-username-input'
             className="width-0 text-white">
+
             Username
 
           </Label>
@@ -67,6 +68,7 @@ class LoginForm extends Component {
         <div className="flex-1 justify flex-row width-full m-1">
           <Label htmlFor='login-password-input'
             className="width-0 text-white">
+
             Password
 
           </Label>
