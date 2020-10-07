@@ -22,7 +22,7 @@ export default class App extends Component {
     return (
       <div className='App flex width-full height-full'>
         <Header />
-        <main className="justify flex  pb-10">
+        <main className="justify flex-col-wrap width-full pb-10">
           {hasError&&(
             <p className="font-xl text-red">There was an error! Oh no!</p>
           )}

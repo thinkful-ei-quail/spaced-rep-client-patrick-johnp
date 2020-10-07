@@ -26,15 +26,6 @@ export class LanguageProvider extends React.Component {
     this.state=state;
   }
 
-  componentDidMount() {
-    // LanguageService.getLanguageWords()
-    //   .then(res => {
-    //     this.setLanguage(res.language)
-    //     this.setWords(res.words)
-    //   })
-  }
-
-
   setLangError=(error) => {
     console.error(error)
     this.setState({error})

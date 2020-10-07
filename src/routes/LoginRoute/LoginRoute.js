@@ -18,7 +18,7 @@ class LoginRoute extends Component {
 
   render() {
     return (
-      <section className="box-shadow rounded-light p-4 mt-1 m-1 flex-col-wrap max-fit width-full center ">
+      <section className="rounded-light p-2 mt-1 flex-col-wrap width-full center ">
         <h2 className=" font-irish flex-1 text-shadow">Login</h2>
         <ErrorBoundary>
           <LoginForm
