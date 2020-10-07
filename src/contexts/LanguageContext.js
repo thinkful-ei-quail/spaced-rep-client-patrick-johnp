@@ -1,4 +1,4 @@
-import LanguageService from "../services/language-service";
+
 import React from 'react'
 
 const LanguageContext=React.createContext({
@@ -27,11 +27,11 @@ export class LanguageProvider extends React.Component {
   }
 
   componentDidMount() {
-    LanguageService.getLanguageWords()
-      .then(res => {
-        this.setLanguage(res.language)
-        this.setWords(res.words)
-      })
+    // LanguageService.getLanguageWords()
+    //   .then(res => {
+    //     this.setLanguage(res.language)
+    //     this.setWords(res.words)
+    //   })
   }
 
 
