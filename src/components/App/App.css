@@ -39,6 +39,11 @@ body,
 
 }
 
+.anim-plus {
+  animation: gentle-wiggle 2.1s infinite;
+
+}
+
 .background-green {
   background-color: #0e6d3b;
 }
@@ -71,6 +76,10 @@ body,
 
 .box-shadow-dark {
   box-shadow: 0.2em 0.2em 0.2rem grey;
+}
+
+.box-shadow-xl {
+  box-shadow: 0.3em 0.2em 1rem lightslategrey;
 }
 
 .shadow-none {
@@ -188,12 +197,20 @@ body,
   font-size: 4rem;
 }
 
+.font-nav {
+  font-size: 3rem;
+}
+
 .tracking-wide {
   letter-spacing: 0.2em;
 }
 
 .text-white {
   color: white;
+}
+
+.text-black {
+  color: black;
 }
 
 .text-red {
@@ -424,4 +441,8 @@ body,
 
 .height-fit {
   height: fit-content;
+}
+
+.pos-bottom {
+  position: bottom;
 }

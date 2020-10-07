@@ -3,6 +3,7 @@ import LanguageContext from '../../contexts/LanguageContext';
 import LanguageService from '../../services/language-service'
 import '../../components/App/App.css'
 import {Link} from 'react-router-dom';
+import ErrorBoundary from '../../components/ErrorBoundary';
 class DashboardRoute extends Component {
   static contextType=LanguageContext;
   constructor(context) {
@@ -46,10 +47,16 @@ class DashboardRoute extends Component {
         <div className="flex-2 font-xl">You're Learning: {language.name}</div>
         <div className="flex-2 font-xl ">Total Score: {language.total_score}</div>
         <div>
-          <button className="text-white font-xl font-mono py-2 m-1 hover rounded flex-1 box-shadow hoverbutt text-dec-none transition border-none">
-            <Link to="/learn" className="text-white font-xl font-mono py-2 m-1  rounded-top text-dec-none">
-              Learning</Link></button></div>
+          <ErrorBoundary>
+            <button className="text-white font-xl font-mono py-2 m-1 hover rounded flex-1 box-shadow hoverbutt text-dec-none transition border-none">
+              <Link to="/learn" className="text-white font-xl font-mono py-2 m-1  rounded-top text-dec-none">
+                Learning
+                </Link>
+            </button>
+          </ErrorBoundary>
+        </div>
         <div className=" flex-row flex-2 max-h-50 justify p-4">{this.renderWordScores()}</div>
+
       </section>
     );
   }

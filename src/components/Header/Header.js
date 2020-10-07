@@ -13,38 +13,39 @@ class Header extends Component {
   // {this.context.user.username}'s
   renderLogoutLink() {
     return (
-      <div className="flex-1 flex-col rounded-top mx-2 center">
-        <nav className="flex-1 flex-row rounded-top ">
-          <Link to="/" className="text-white flex-1 text-dec-none font-irish tracking-wide linkhover"><h3>
-            Dashboard</h3>
-          </Link>
 
-          <Link className="text-white mx-2 flex-1 text-dec-none font-irish tracking-wide linkhover"
-            onClick={this.handleLogoutClick}
-            to='/login'><h3>
-              Logout</h3>
-          </Link>
-        </nav>
-      </div>
+      <nav className="flex-1 flex-row justify m-1 pos-bottom">
+        <Link to="/" className="text-white flex-1  mx-2  text-dec-none font-irish tracking-wide linkhover m-1"><h3>
+          Dashboard</h3>
+        </Link>
+
+        <Link className="text-white mx-2 flex-1 text-dec-none font-irish tracking-wide linkhover m-1"
+          onClick={this.handleLogoutClick}
+          to='/login'><h3>
+            Logout</h3>
+        </Link>
+      </nav>
+
     )
   }
 
   renderLoginLink() {
     return (
-      <nav className="flex-1 flex-row rounded-top  center">
-        <Link to='/login' className="text-white font-xl font-mono py-2 m-1 linkhover rounded-top flex-1 text-dec-none">Login</Link>
+      <nav className="flex-1 flex-col pos-bottom justify m-1 ">
+        <Link to='/login' className="text-white mx-2 font-nav flex-1 text-dec-none font-irish tracking-wide linkhover m-1">Login</Link>
         {' '}
-        <Link to='/register' className="text-white font-xl font-mono py-2 m-1 rounded-top linkhover flex-1 text-dec-none ">Sign up</Link>
+        <Link to='/register' className="text-white mx-2 font-nav flex-1 text-dec-none font-irish tracking-wide linkhover m-1">Sign up</Link>
       </nav>
     )
   }
 
   render() {
     return (
-      <header className="height-cont bg-grad-to-r center rounded-tr-bl width-full mx-10 font-mono font-xl text-white flex ">
+      <header className="bg-grad-to-r flex-1 justify center rounded-tr-bl
+      width-full m-1 font-mono font-xl text-white flex-row-wrap height-fit">
 
         <Link to='/' className="text-white text-dec-none font-header font-irish tracking-wide">
-          <h1 className="flex-1 text-outline">
+          <h1 className=" text-outline">
             Spaced repetition
             </h1>
         </Link>

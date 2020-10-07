@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import ErrorBoundary from '../../components/ErrorBoundary'
 import LoginForm from '../../components/LoginForm/LoginForm'
 
 class LoginRoute extends Component {
@@ -19,9 +20,11 @@ class LoginRoute extends Component {
     return (
       <section className="box-shadow rounded-light p-4 mt-1 m-1 flex-col-wrap max-fit width-full center ">
         <h2 className=" font-irish flex-1 text-shadow">Login</h2>
-        <LoginForm
-          onLoginSuccess={this.handleLoginSuccess}
-        />
+        <ErrorBoundary>
+          <LoginForm
+            onLoginSuccess={this.handleLoginSuccess}
+          />
+        </ErrorBoundary>
       </section>
     );
   }

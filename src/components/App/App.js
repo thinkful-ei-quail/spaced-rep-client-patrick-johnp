@@ -9,8 +9,6 @@ import DashboardRoute from '../../routes/DashboardRoute/DashboardRoute'
 import LearningRoute from '../../routes/LearningRoute/LearningRoute'
 import NotFoundRoute from '../../routes/NotFoundRoute/NotFoundRoute'
 import './App.css'
-
-
 export default class App extends Component {
   state={hasError: false}
 
@@ -22,11 +20,11 @@ export default class App extends Component {
   render() {
     const {hasError}=this.state
     return (
-      <div className='App flex width-full'>
+      <div className='App flex width-full height-full'>
         <Header />
-        <main className="center flex width-full height-full pb-10">
+        <main className="justify flex  pb-10">
           {hasError&&(
-            <p>There was an error! Oh no!</p>
+            <p className="font-xl text-red">There was an error! Oh no!</p>
           )}
           <Switch>
             <PrivateRoute
@@ -52,7 +50,7 @@ export default class App extends Component {
           </Switch>
         </main>
 
-        <footer className="background-orange width-full flex-base mt-1 max-height-4 mt-10">
+        <footer className="background-orange width-full flex-base mt-1 max-height-4 mt-10 pos-bottom ">
           <div className="flex-1 text-bold background-orange px-2 text-white center tracking-wide font-mono font-xl">
             Practice learning a language with the spaced reptition revision technique.
           </div>
