@@ -17,7 +17,7 @@ class RegistrationRoute extends Component {
 
   render() {
     return (
-      <section className='box-shadow rounded-light p-4 mt-1 m-1 flex-col center max-fit width-full'>
+      <section className='rounded-light p-4 mt-1 m-1 flex-col center max-fit width-full'>
         <h2 className="font-irish flex-1 text-shadow">Sign up</h2>
         <ErrorBoundary>
           <RegistrationForm
