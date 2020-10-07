@@ -44,16 +44,18 @@ class LoginForm extends Component {
     const {error}=this.state
     return (
       <form
-        className='LoginForm flex-col center box-shadow-xl p-4 rounded justify width-60-per height-fit font-nav font-mono '
-        onSubmit={this.handleSubmit}
-      >
+        className='LoginForm flex-col center box-shadow-xl p-4 rounded justify width-60-per
+        height-fit font-nav font-mono '
+        onSubmit={this.handleSubmit}>
         <div role='alert' className=" flex-1">
           {error&&<p className="font-xxl text-red">{error}</p>}
         </div>
-        <div className="flex-row justify flex-1">
+        <div className="flex-row justify flex-1 width-full m-1">
           <Label htmlFor='login-username-input'
-            className=" flex-1">
+            className="width-0 text-white">
+
             Username
+
           </Label>
           <Input className="flex-1 border-none font-xl"
             ref={this.firstInput}
@@ -63,10 +65,12 @@ class LoginForm extends Component {
             required
           />
         </div>
-        <div className="flex-1 justify flex-row">
+        <div className="flex-1 justify flex-row width-full m-1">
           <Label htmlFor='login-password-input'
-            className="flex-1">
+            className="width-0 text-white">
+
             Password
+
           </Label>
           <Input className="font-xl border-none flex-1"
             placeholder="password here"
@@ -77,7 +81,8 @@ class LoginForm extends Component {
           />
         </div>
         <Button type='submit'
-          className="rounded hoverbutt border-none flex-1 transition center m-2 font-xxl font-mono ">
+          className="rounded hoverbutt border-none flex-1
+           transition center m-2 font-xxl font-mono ">
           Login
         </Button>
       </form>
