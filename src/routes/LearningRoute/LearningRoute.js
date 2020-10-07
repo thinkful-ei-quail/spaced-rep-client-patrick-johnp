@@ -68,8 +68,8 @@ export default class LearningRoute extends Component {
 
             <div className="flex-1 flex-row font-xl">{this.renderWord()}</div> {this.state.answered&&<div className="flex-row-nowrap center flex-2 font-xl max-fit text-dec-none transition"><button className="flex-2 font-xl text-white font-xl font-mono hover box-shadow hoverbutt border-none" onClick={this.handleNextWord} >Next Word</button></div>}
             {!this.state.answered&&
-              <div className="flex-col-wrap flex-2 justify max-fit focus font-xl input box-shadow rounded text-dec-none transition">
-                <input className="font-xl flex-1 border-none focus rounded-tl-bl hovernone bg-invis text-right" type="text" id="guess_input" name="guess_input" onChange={this.handleUpdateGuess}>
+              <div className="flex-row flex-2 max-fit focus font-xl input box-shadow rounded text-dec-none transition">
+                <input className="font-xl flex-1 border-none focus px-2 rounded-tl-bl hovernone bg-invis center" type="text" id="guess_input" name="guess_input" onChange={this.handleUpdateGuess}>
                 </input>
                 <button className="hovernone flex-1  font-xl focus rounded-tr-br text-white font-mono hover hoverbutt border-none" onClick={this.handleSubmitGuess} >
                   Submit Guess

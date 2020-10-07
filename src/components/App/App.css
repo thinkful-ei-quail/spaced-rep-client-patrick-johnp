@@ -180,7 +180,6 @@ body,
   font-size: x-large;
 }
 
-
 .font-header {
   font-size: 2rem;
 }
@@ -243,7 +242,6 @@ body,
   transition: ease-in, 0.1s;
   transform: scale(1.25);
   transition-delay: 0.01s;
-
   text-decoration: underline;
 }
 
@@ -351,8 +349,6 @@ body,
 .p-4 {
   padding: 2rem;
 }
-
-
 
 .py-1 {
   padding-top: 0.2rem;
